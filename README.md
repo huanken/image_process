@@ -6,21 +6,15 @@ You will build upon the application we've developed during the lessons in this c
 URL Image: [Filtered Image Processing](http://image-process-app-dev.us-east-1.elasticbeanstalk.com/filteredimage/?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg)
 `http://image-process-app-dev.us-east-1.elasticbeanstalk.com/filteredimage/?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg`
 
-## Getting Started
+## Steps:
+### 1. Create elatic beanstalk app and enviroment
+![Create-EB](./deployment_screenshot/init_elaticbeanstalk.png)
 
-You can clone this repo to run the project locally, or navigate to the workspace in the Udacity course.
+### 2. Test filtered image
+![Test-filtered-image](./deployment_screenshot/test_filtered_image.png)
 
-## Project Instructions
-
-To complete this project, you will need to:
-
-* Set up node environment
-* Create a new endpoint in the server.js file
-* Deploying your system
-
-## Testing
-
-Successful URL responses should have a 200 code. Ensure that you include error codes for the scenario that someone uploads something other than an image and for other common errors.
+### 3. Test invalid image url
+![Test-invalid-image](./deployment_screenshot/test_invalid_image.png)
 
 ## License
 
