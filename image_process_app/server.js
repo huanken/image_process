@@ -42,13 +42,14 @@ app.get('/filteredimage/', async (req, res) => {
   }
 
   filterImageFromURL(image_url).then((filteredImage) => {
-    console.log(filteredImage);
     res.status(200).sendFile(filteredImage), error => {
       if (error) {
-        res.status(400).send('Can not send image.')
+        res.status(400).send('Can not filter image.')
       }
       deleteLocalFiles(filteredImage);
     }
+  }).catch((error) => {
+    res.status(400).send('Can not filter image.')
   })
 });
 
