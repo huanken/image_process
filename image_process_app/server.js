@@ -38,18 +38,18 @@ app.get('/filteredimage/', async (req, res) => {
   if (!image_url) {
     return res.status(400).send(`Image URL is required`);
   } else if (!regex.test(image_url)) {
-    return res.status(422).send(`Image URL is invalid`);
+    return res.status(421).send(`Image URL is invalid`);
   }
 
   filterImageFromURL(image_url).then((filteredImage) => {
     res.status(200).sendFile(filteredImage), error => {
       if (error) {
-        res.status(400).send('Can not filter image.')
+        res.status(422).send('Can not filter image.')
       }
       deleteLocalFiles(filteredImage);
     }
   }).catch((error) => {
-    res.status(400).send('Can not filter image.')
+    res.status(423).send('Can not filter image.')
   })
 });
 
